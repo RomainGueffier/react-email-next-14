@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -6,6 +6,7 @@ export default function Home() {
       <h1>React Email runtime rendering test</h1>
       <Link href="/server">Server rendered email</Link>
       <Link href="/client">Client rendered email</Link>
+      <Link href="/hook">Client form hook rendered email</Link>
     </main>
   )
 }

@@ -2,22 +2,21 @@
   "name": "test-2",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "email": "email dev -p 3030"
+    "email:dev": "email preview ./templates",
+    "email:check": "email check ./templates"
   },
   "dependencies": {
-    "@react-email/button": "0.0.11",
-    "@react-email/components": "^0.0.11",
-    "@react-email/html": "0.0.6",
-    "@react-email/render": "^0.0.10",
     "next": "14.0.2",
     "react": "^18",
     "react-dom": "^18",
-    "react-email": "^1.9.5"
+    "jsx-email": "^1.0.1",
+    "superstruct": "^1.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
