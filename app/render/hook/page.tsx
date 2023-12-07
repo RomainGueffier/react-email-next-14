@@ -1,5 +1,5 @@
 "use client"
-import { renderAsync } from "@react-email/render"
+import { render } from "@react-email/render"
 import Link from "next/link"
 import { useState } from "react"
 import Email from "@/emails"
@@ -17,7 +17,7 @@ const useForm = () => {
     const title = data.get("title")!.toString()
     const content = data.get("content")!.toString()
 
-    const templateOutput = await renderAsync(
+    const templateOutput = render(
       <Email content={content} btn={btnText} title={title} />
     )
     if (templateOutput) setHtml(templateOutput)
@@ -34,7 +34,7 @@ export default function Client() {
   return (
     <main className="space-y-8 p-24 bg-slate-900 h-screen text-white">
       <Link href="/">back home</Link>
-      <h1>Client form hook</h1>
+      <h1>Client form hook with RENDER</h1>
       <form
         onSubmit={handleSubmit}
         className="p-4 rounded shadow space-y-2 bg-slate-700 w-fit"
